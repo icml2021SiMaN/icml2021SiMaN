@@ -1,5 +1,5 @@
 # ICML21
-Pytorch implementation of ICML2021_SiMaN   
+Pytorch implementation of ICML2021 (SiMaN)  
 
 ## Dependencies 
 * python 3.7
@@ -39,7 +39,7 @@ To verify the performance of our quantized models on CIFAR-10, please use the fo
 ```bash 
 python -u main.py \
 --gpus 0 \
--e [best_model_path] \
+-e [best_model_path] \ # quantized model path (see the quantized model link)
 --model resnet20_1w1a (resnet18_1w1a or vgg_small_1w1a) \
 --data_path [DATA_PATH] \
 --dataset cifar10 \
@@ -84,7 +84,7 @@ To verify the performance of our quantized models on ImageNet, please use the fo
 ```bash
 python -u main.py \
 --gpu 0 \
--e [best_model_path] \
+-e [best_model_path] \ # quantized model path (see the quantized model link)
 --model resnet18_1w1a (or resnet34_1w1a)\
 --dataset imagenet \
 --data_path [DATA_PATH] \
