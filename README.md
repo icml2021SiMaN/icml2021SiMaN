@@ -62,7 +62,7 @@ python -u main.py \
 --use_dali \
 ```
 
-We provide two types of dataloaders by [nvidia-dali](https://docs.nvidia.com/deeplearning/dali/user-guide/docs/index.html) and [Pytorch](https://pytorch.org/docs/stable/data.html) respectively. They use the same data augmentations, including random crop and horizontal flip. We empirically find that the dataloader by Pytorch can offer a better accuracy performance. They may have different code implementations. Anyway, we haven't figured it out yet. However, nvidia-dali shows its extreme efficiency in processing data which well accelerates the network training. The reported experimental results are on the basis of nvidia-dali. If interested, you can try dataloader by Pytorch via removing the optional argument ```--use_dali``` to obtain a better performance.  
+We provide two types of dataloaders by [nvidia-dali](https://docs.nvidia.com/deeplearning/dali/user-guide/docs/index.html) and [Pytorch](https://pytorch.org/docs/stable/data.html) respectively. They use the same data augmentations, including random cropping and horizontal flipping. Nvidia-dali shows an extreme efficiency in processing data which well accelerates the network training. The reported experimental results are on the basis of nvidia-dali. If interested, you can try dataloader by Pytorch via removing the optional argument ```--use_dali``` to obtain a better performance.  
 
 Nvidia-dali package
 ```bash
@@ -78,8 +78,7 @@ pip install --extra-index-url https://developer.download.nvidia.com/compute/redi
 | [resnet18_1w1a](https://drive.google.com/drive/folders/15pwL5UeJGFHNwHNFh7Yl6dFgAX9QvxE5?usp=sharing)|    512     |       256       |  150  |   ✔    | 60.1 | 82.3 |
 | [resnet34_1w1a](https://drive.google.com/drive/folders/1vhl1Q9ulTfqMy27Gn5lFIMgop24UIRh8?usp=sharing)|    512     |       256       |  150  |   ✔    | 63.9 | 84.8 |
 
-To ensure the reproducibility, please refer to our training details provided in the links for our quantized models. \
-Small tips for further boosting the performance of our method: (1) removing the optional argument ```--use_dali``` as discussed above; (2) increasing the training epochs; (3) enlarging the batch size for training.
+To ensure the reproducibility, please refer to our training details provided in the links for our quantized models.
 
 To verify the performance of our quantized models on ImageNet, please use the following command:
 ```bash
